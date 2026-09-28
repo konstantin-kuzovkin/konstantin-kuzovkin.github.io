@@ -1,756 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Konstantin Kuzovkin — Senior / Lead System Analyst</title>
-
-  <meta
-    name="description"
-    content="Konstantin Kuzovkin — Senior / Lead System Analyst focused on Solution & Integration Architecture, Distributed Systems, Microservices, Kafka and AI-assisted Engineering."
-  >
-
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --surface: #ffffff;
-      --text: #172033;
-      --muted: #5f6b7a;
-      --border: #e2e6eb;
-      --accent: #2563eb;
-      --accent-dark: #1d4ed8;
-      --tag-bg: #eef4ff;
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--accent-dark);
-    }
-
-    .container {
-      width: min(100% - 40px, var(--max-width));
-      margin: 0 auto;
-    }
-
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav {
-      min-height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-weight: 700;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      font-size: 14px;
-    }
-
-    .hero {
-      padding: 100px 0 90px;
-      background: var(--surface);
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-    }
-
-    .hero h2 {
-      margin: 0 0 24px;
-      font-size: clamp(22px, 3vw, 32px);
-      font-weight: 500;
-      color: var(--muted);
-    }
-
-    .hero p {
-      max-width: 780px;
-      margin: 0 0 30px;
-      font-size: 18px;
-      color: var(--muted);
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 18px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .button.primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
-
-    .button:hover {
-      text-decoration: none;
-      transform: translateY(-1px);
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    section:nth-of-type(even) {
-      background: var(--surface);
-    }
-
-    .section-title {
-      margin: 0 0 12px;
-      font-size: 32px;
-      letter-spacing: -0.5px;
-    }
-
-    .section-intro {
-      max-width: 760px;
-      margin: 0 0 36px;
-      color: var(--muted);
-    }
-
-    .about {
-      max-width: 820px;
-      font-size: 17px;
-    }
-
-    .expertise-grid,
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    section:nth-of-type(even) .card {
-      background: var(--bg);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 19px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .case-number {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .case-link {
-      display: inline-block;
-      margin-top: 16px;
-      font-weight: 600;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
-    }
-
-    .tag {
-      background: var(--tag-bg);
-      color: #244a9b;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-    }
-
-    .experience-item {
-      max-width: 850px;
-      border-left: 3px solid var(--accent);
-      padding-left: 24px;
-    }
-
-    .experience-item h3 {
-      margin: 0 0 4px;
-    }
-
-    .experience-item .period {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .experience-item ul {
-      padding-left: 20px;
-    }
-
-    .contact-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      max-width: 850px;
-    }
-
-    footer {
-      padding: 35px 0;
-      background: #111827;
-      color: #cbd5e1;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #93c5fd;
-    }
-
-    @media (max-width: 850px) {
-      .expertise-grid,
-      .cases-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero {
-        padding: 75px 0 65px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        width: min(100% - 28px, var(--max-width));
-      }
-
-      nav {
-        padding: 12px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .expertise-grid,
-      .cases-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konstantin Kuzovkin — Senior / Lead System Analyst</title>
+<meta name="description" content="Konstantin Kuzovkin — Senior / Lead System Analyst focused on Solution & Integration Architecture, Distributed Systems, Microservices, Kafka and AI-assisted Engineering.">
+<style>
+:root{--bg:#f3eefb;--surface:#fff;--text:#1f1633;--muted:#5f5474;--border:#e2d8f3;--accent:#6b3fc0;--accent2:#9b59d0;--tag:#efe6fb;--hero1:#241553;--hero2:#7a45c9}
+@media (prefers-color-scheme:dark){:root{--bg:#140d26;--surface:#1f1638;--text:#efe9fb;--muted:#b3a6cc;--border:#3a2b5c;--accent:#b794f4;--accent2:#d19cf5;--tag:#2c1f4d;--hero1:#150b33;--hero2:#4a2a91}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{font-weight:700;text-decoration:none;color:var(--text)}
+nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;padding:72px 0 64px}
+.hero h1{margin:0 0 6px;font-size:clamp(2rem,5vw,3rem);line-height:1.15}
+.hero .role{font-size:clamp(1.1rem,2.6vw,1.5rem);font-weight:600;margin:0 0 14px;opacity:.95}
+.hero p{max-width:700px;margin:0 0 10px;opacity:.92}
+.btns{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn.primary{background:#fff;color:#241553;border-color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:-34px;position:relative}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 14px;text-align:center;box-shadow:0 6px 18px rgba(60,30,120,.10)}
+.stat b{display:block;font-size:1.6rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.88rem}
+section{padding:54px 0 6px}
+h2.t{font-size:1.65rem;margin:0 0 8px}
+h2.t::after{content:"";display:block;width:46px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin-top:8px}
+.intro{color:var(--muted);max-width:760px;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 8px 22px rgba(60,30,120,.14);transform:translateY(-2px)}
+.card h3{margin:0 0 8px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .n{font-size:.75rem;letter-spacing:.08em;font-weight:700;color:var(--accent2);margin-bottom:4px}
+.card a.go{display:inline-block;margin-top:12px;font-weight:600;text-decoration:none}
+.about p{max-width:820px;margin:0 0 14px}
+.team{border-left:4px solid var(--accent2)}
+.team li{margin-bottom:6px}
+ul{padding-left:20px;margin:8px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{background:var(--tag);color:var(--accent);padding:5px 12px;border-radius:999px;font-size:.85rem;font-weight:500}
+.job h3{margin:0}
+.job .when{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem;text-align:center}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+@media (max-width:640px){nav{display:none}.hero{padding:52px 0 54px}}
+</style>
 </head>
-
 <body>
-
-<header>
-  <div class="container">
-    <nav>
-      <a class="brand" href="#top">Konstantin Kuzovkin</a>
-
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#cases">Cases</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap">
+<a class="brand" href="#top">Konstantin Kuzovkin</a>
+<nav><a href="#about">About</a><a href="#teamwork">Teamwork</a><a href="#expertise">Expertise</a><a href="#cases">Cases</a><a href="#proof">Proof of concept</a><a href="#experience">Experience</a><a href="#links">Contact</a></nav>
+</div></header>
 
 <main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-
-      <h1>Konstantin Kuzovkin</h1>
-
-      <h2>
-        Senior / Lead System Analyst<br>
-        Solution &amp; Integration Architecture
-      </h2>
-
-      <p>
-        Banking · FinTech · Distributed Systems · Microservices · Kafka ·
-        Platform Architecture · AI-assisted Engineering
-      </p>
-
-      <div class="buttons">
-        <a
-          class="button primary"
-          href="https://github.com/konstantin-kuzovkin/architecture-portfolio"
-          target="_blank"
-          rel="noopener"
-        >
-          Architecture Portfolio
-        </a>
-
-        <a
-          class="button"
-          href="https://www.linkedin.com/in/konstantin-kuzovkin/"
-          target="_blank"
-          rel="noopener"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          class="button"
-          href="cv/Konstantin_Kuzovkin_CV.pdf"
-        >
-          Download CV
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-
-      <h2 class="section-title">About</h2>
-
-      <div class="about">
-        <p>
-          Senior / Lead System Analyst focused on solution and integration
-          architecture for distributed, microservice-based systems in banking.
-        </p>
-
-        <p>
-          My experience covers distributed transactions, event-driven
-          architecture, API and event contracts, platform architecture and
-          workflow orchestration, with a strong focus on reliability,
-          consistency, idempotency, failure handling and reconciliation.
-        </p>
-
-        <p>
-          I work with REST/OpenAPI, SOAP/XML, Kafka/AsyncAPI, BPMN/Camunda,
-          UML, ERD, data modelling and authentication/authorization.
-        </p>
-
-        <p>
-          I also contribute to architecture standards, architecture reviews,
-          cross-team solution alignment and functional leadership without
-          formal people management.
-        </p>
-
-        <p>
-          One of my recent engineering initiatives is an AI-assisted system
-          analysis agent based on LLMs, controlled tools and specialised
-          analytical agents, using source-grounded analysis, evidence
-          provenance and explicit hallucination controls.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- EXPERTISE -->
-  <section id="expertise">
-    <div class="container">
-
-      <h2 class="section-title">Architecture Expertise</h2>
-
-      <p class="section-intro">
-        Practical focus areas demonstrated through architecture cases,
-        technical artefacts and documented architecture decisions.
-      </p>
-
-      <div class="expertise-grid">
-
-        <div class="card">
-          <h3>Distributed Systems</h3>
-          <p>
-            State ownership · Idempotency · Concurrency ·
-            Transactions · Reconciliation · Failure Recovery
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Integration Architecture</h3>
-          <p>
-            REST · OpenAPI · SOAP/XML · Kafka · AsyncAPI ·
-            Synchronous and Asynchronous Integration
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Event-Driven Architecture</h3>
-          <p>
-            At-least-once delivery · Ordering · Retry · DLQ ·
-            Event Contracts · Schema Evolution
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Platform Architecture</h3>
-          <p>
-            Architecture Governance · Standards · Architecture Reviews ·
-            Reusable Patterns · Cross-team Alignment
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Workflow Architecture</h3>
-          <p>
-            BPMN · Camunda · Orchestration · Long-running Processes ·
-            Compensation · Recovery
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>AI-assisted Engineering</h3>
-          <p>
-            LLM · AI Agents · Tool Calling · RAG ·
-            Source-grounded Analysis · Provenance · Hallucination Control
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CASES -->
-  <section id="cases">
-    <div class="container">
-
-      <h2 class="section-title">Selected Architecture Cases</h2>
-
-      <p class="section-intro">
-        Six practical architecture cases covering distributed systems,
-        integration, event-driven architecture, platform governance,
-        workflow orchestration and AI-assisted system analysis.
-      </p>
-
-      <div class="cases-grid">
-
-        <div class="card">
-          <div class="case-number">CASE 01</div>
-          <h3>Payment &amp; Transfer Architecture</h3>
-          <p>
-            Distributed transaction processing, state ownership,
-            idempotency, concurrency control and reconciliation.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/01-payment-transfer-architecture"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="case-number">CASE 02</div>
-          <h3>Event-Driven Architecture</h3>
-          <p>
-            Kafka-based integration, delivery semantics, ordering,
-            idempotent consumers, retry/DLQ and AsyncAPI.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/02-event-driven-architecture"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="case-number">CASE 03</div>
-          <h3>Integration Architecture</h3>
-          <p>
-            REST/OpenAPI, legacy SOAP/XML and asynchronous Kafka
-            integration patterns and contracts.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/03-integration-architecture"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="case-number">CASE 04</div>
-          <h3>Platform Architecture</h3>
-          <p>
-            Architecture governance, standards, reusable patterns,
-            architecture reviews and multi-team alignment.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/04-platform-architecture"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="case-number">CASE 05</div>
-          <h3>Workflow &amp; Process Orchestration</h3>
-          <p>
-            BPMN, long-running processes, retries, timeouts,
-            compensation, reconciliation and manual tasks.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/05-workflow-orchestration"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="case-number">CASE 06</div>
-          <h3>AI-Assisted System Analysis</h3>
-          <p>
-            LLM-based analytical agents, controlled tools,
-            source-grounded analysis and hallucination control.
-          </p>
-          <a
-            class="case-link"
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/06-ai-assisted-system-analysis"
-            target="_blank"
-            rel="noopener"
-          >
-            View case →
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-
-      <h2 class="section-title">Professional Experience</h2>
-
-      <div class="experience-item">
-
-        <h3>Large Russian Bank — System Analyst / Senior System Analyst</h3>
-
-        <div class="period">
-          2021 — Present · Banking · Remote
-        </div>
-
-        <ul>
-          <li>
-            Worked on the architecture and evolution of a large omnichannel
-            banking platform based on microservices and Domain-Driven Design.
-          </li>
-
-          <li>
-            Designed distributed transaction flows with explicit state
-            ownership, idempotency, concurrency control, timeout handling
-            and reconciliation.
-          </li>
-
-          <li>
-            Designed integration solutions across REST/OpenAPI, SOAP/XML
-            and Kafka/AsyncAPI.
-          </li>
-
-          <li>
-            Designed event-driven patterns including at-least-once delivery,
-            idempotent consumers, partition ordering, retry/DLQ and event
-            contract evolution.
-          </li>
-
-          <li>
-            Designed workflow and process solutions using BPMN/Camunda,
-            including retries, timeouts, compensation, reconciliation and
-            controlled manual intervention.
-          </li>
-
-          <li>
-            Contributed to architecture standards, reusable patterns,
-            architecture reviews and cross-team solution alignment.
-          </li>
-
-          <li>
-            Performed functional leadership without formal people management.
-          </li>
-
-          <li>
-            Designed and implemented an AI-assisted system analysis agent
-            using LLMs, controlled tools and specialised analytical agents.
-          </li>
-        </ul>
-
-      </div>
-
-      <div class="tags">
-        <span class="tag">Microservices</span>
-        <span class="tag">DDD</span>
-        <span class="tag">Kafka</span>
-        <span class="tag">OpenAPI</span>
-        <span class="tag">AsyncAPI</span>
-        <span class="tag">BPMN</span>
-        <span class="tag">Camunda</span>
-        <span class="tag">Oracle</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">ClickHouse</span>
-        <span class="tag">Keycloak</span>
-        <span class="tag">OAuth 2.0</span>
-        <span class="tag">JWT</span>
-        <span class="tag">mTLS</span>
-        <span class="tag">LLM</span>
-        <span class="tag">AI Agents</span>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-
-      <h2 class="section-title">Links</h2>
-
-      <div class="contact-box">
-
-        <p>
-          <strong>Architecture Portfolio:</strong><br>
-          <a
-            href="https://github.com/konstantin-kuzovkin/architecture-portfolio"
-            target="_blank"
-            rel="noopener"
-          >
-            github.com/konstantin-kuzovkin/architecture-portfolio
-          </a>
-        </p>
-        
-        <p>
-          <strong>Proof-of-Concept Repos:</strong><br>
-          <a href="https://github.com/konstantin-kuzovkin/outbox-idempotency-poc" target="_blank" rel="noopener">
-            outbox-idempotency-poc
-          </a>
-          ·
-          <a href="https://github.com/konstantin-kuzovkin/requirements-pipeline-poc" target="_blank" rel="noopener">
-            requirements-pipeline-poc
-          </a>
-        </p>
-
-        <p>
-          <strong>LinkedIn:</strong><br>
-          <a
-            href="https://www.linkedin.com/in/konstantin-kuzovkin/"
-            target="_blank"
-            rel="noopener"
-          >
-            linkedin.com/in/konstantin-kuzovkin
-          </a>
-        </p>
-
-        <p>
-          <strong>CV:</strong><br>
-          <a href="cv/Konstantin_Kuzovkin_CV.pdf">
-            Download PDF CV
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
+<div class="hero"><div class="wrap">
+<h1>Konstantin Kuzovkin</h1>
+<p class="role">Senior / Lead System Analyst · Solution &amp; Integration Architecture</p>
+<p>I help teams turn complex banking processes into clear, reliable and testable solutions — and I enjoy doing it together with developers, architects, testers and business owners.</p>
+<p>Banking · FinTech · Distributed Systems · Microservices · Kafka · Platform Architecture · AI-assisted Engineering</p>
+<div class="btns">
+<a class="btn primary" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener">Architecture Portfolio</a>
+<a class="btn" href="https://www.linkedin.com/in/konstantin-kuzovkin/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="cv/Konstantin_Kuzovkin_CV.pdf">Download CV</a>
+</div>
+</div></div>
+
+<div class="wrap"><div class="stats">
+<div class="stat"><b>5+</b><span>years in a large bank</span></div>
+<div class="stat"><b>40+</b><span>development teams supported</span></div>
+<div class="stat"><b>~10</b><span>business domains</span></div>
+<div class="stat"><b>90+</b><span>microservices</span></div>
+<div class="stat"><b>~12</b><span>years of insurance operations before IT</span></div>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<h2 class="t">About</h2>
+<p>I am a Senior / Lead System Analyst working on distributed, microservice-based systems in banking. My focus is solution and integration architecture: state ownership, idempotency, failure handling, reconciliation, API and event contracts.</p>
+<p>Before IT I spent about 12 years in insurance claims, so I read financial processes from the business side first. That helps me ask the right questions early and explain technical trade-offs in plain language.</p>
+<p>I work with REST/OpenAPI, SOAP/XML, Kafka/AsyncAPI, BPMN/Camunda, UML, ERD, data modelling and authentication/authorization. I am also building AI-assisted analysis tools based on LLMs, controlled tools and specialised agents, with source-grounded analysis and explicit hallucination controls.</p>
+</div></section>
+
+<section id="teamwork"><div class="wrap">
+<h2 class="t">How I work with teams</h2>
+<p class="intro">Good architecture is a shared result. I like clear agreements, open discussion of trade-offs and helping people around me grow.</p>
+<div class="grid">
+<div class="card team"><h3>Cross-team alignment</h3><p>Aligning solutions across many teams, reviewing architecture together and resolving cross-team questions before they become blockers.</p></div>
+<div class="card team"><h3>Functional leadership</h3><p>Coordinating day-to-day analytical work and guiding colleagues without formal people management — through clarity, trust and example.</p></div>
+<div class="card team"><h3>Sharing knowledge</h3><p>Taking part in knowledge-sharing sessions and technical assessments of candidates, and documenting decisions so the next person can build on them.</p></div>
+<div class="card team"><h3>Standards that help</h3><p>Contributing to architecture standards and reusable patterns that make everyday work of neighbouring teams simpler, not heavier.</p></div>
+</div>
+</div></section>
+
+<section id="expertise"><div class="wrap">
+<h2 class="t">Architecture expertise</h2>
+<p class="intro">Practical focus areas demonstrated through architecture cases, technical artefacts and documented decisions.</p>
+<div class="grid">
+<div class="card"><h3>Distributed Systems</h3><p>State ownership · Idempotency · Concurrency · Transactions · Reconciliation · Failure Recovery</p></div>
+<div class="card"><h3>Integration Architecture</h3><p>REST · OpenAPI · SOAP/XML · Kafka · AsyncAPI · Synchronous and Asynchronous Integration</p></div>
+<div class="card"><h3>Event-Driven Architecture</h3><p>At-least-once delivery · Ordering · Retry · DLQ · Event Contracts · Schema Evolution</p></div>
+<div class="card"><h3>Platform Architecture</h3><p>Architecture Governance · Standards · Architecture Reviews · Reusable Patterns · Cross-team Alignment</p></div>
+<div class="card"><h3>Workflow Architecture</h3><p>BPMN · Camunda · Orchestration · Long-running Processes · Compensation · Recovery</p></div>
+<div class="card"><h3>AI-assisted Engineering</h3><p>LLM · AI Agents · Tool Calling · RAG · Source-grounded Analysis · Provenance · Hallucination Control</p></div>
+</div>
+</div></section>
+
+<section id="cases"><div class="wrap">
+<h2 class="t">Selected architecture cases</h2>
+<p class="intro">Six reconstructed and sanitised cases (no confidential data) covering distributed systems, integration, events, platform governance, workflows and AI-assisted analysis.</p>
+<div class="grid">
+<div class="card"><div class="n">CASE 01</div><h3>Payment &amp; Transfer Architecture</h3><p>Distributed transactions, state ownership, money flow, idempotency, concurrency control and reconciliation.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/01-payment-transfer-architecture" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 02</div><h3>Event-Driven Architecture</h3><p>Kafka integration, delivery semantics, ordering, transactional outbox, idempotent consumers, retry/DLQ and AsyncAPI.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/02-event-driven-architecture" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 03</div><h3>Integration Architecture</h3><p>REST/OpenAPI, legacy SOAP/XML and asynchronous Kafka integration patterns and contracts.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/03-integration-architecture" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 04</div><h3>Platform Architecture</h3><p>Architecture governance, standards, reusable patterns, architecture reviews and multi-team alignment.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/04-platform-architecture" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 05</div><h3>Workflow &amp; Process Orchestration</h3><p>Executable BPMN, long-running processes, timers, compensation, reconciliation and manual tasks.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/05-workflow-orchestration" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 06</div><h3>AI-Assisted System Analysis</h3><p>LLM agents, controlled tools, source-grounded analysis, provenance and hallucination control.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/06-ai-assisted-system-analysis" target="_blank" rel="noopener">View case →</a></div>
+</div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+<h2 class="t">Proof of concept: working code</h2>
+<p class="intro">Two small, runnable repositories with automated tests — patterns from the cases, implemented and checked.</p>
+<div class="grid">
+<div class="card"><div class="n">PYTHON · 11 TESTS</div><h3>outbox-idempotency-poc</h3><p>Transactional outbox, idempotent consumer and optimistic locking: retries never duplicate an operation and events are not lost.</p><a class="go" href="https://github.com/konstantin-kuzovkin/outbox-idempotency-poc" target="_blank" rel="noopener">Open repository →</a></div>
+<div class="card"><div class="n">PYTHON · 39 TESTS</div><h3>requirements-pipeline-poc</h3><p>Five-agent pipeline (discovery, requirements, artifacts, test design, validation): deterministic checks first, LLM only where judgment is needed.</p><a class="go" href="https://github.com/konstantin-kuzovkin/requirements-pipeline-poc" target="_blank" rel="noopener">Open repository →</a></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap job">
+<h2 class="t">Professional experience</h2>
+<div class="card">
+<h3>Large Russian Bank — System Analyst / Senior System Analyst</h3>
+<div class="when">2021 — Present · Banking · Remote</div>
+<ul>
+<li>Architecture and evolution of a large omnichannel banking platform on microservices and Domain-Driven Design, supporting 40+ teams, ~10 domains and 90+ microservices.</li>
+<li>Designed distributed transaction flows with explicit state ownership, idempotency, concurrency control, timeout handling and reconciliation.</li>
+<li>Designed integrations across REST/OpenAPI, SOAP/XML and Kafka/AsyncAPI, choosing patterns by latency, coupling, consistency and legacy constraints.</li>
+<li>Designed event-driven patterns: at-least-once delivery, idempotent consumers, partition ordering, retry/DLQ and event contract evolution.</li>
+<li>Designed BPMN/Camunda workflows with retries, timeouts, compensation, reconciliation and controlled manual intervention.</li>
+<li>Contributed to architecture standards, reusable patterns, architecture reviews and cross-team solution alignment.</li>
+<li>Functional leadership without formal people management; took part in candidate interviews and knowledge-sharing sessions.</li>
+<li>Designed and implemented an AI-assisted system analysis agent using LLMs, controlled tools and specialised agents.</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">Microservices</span><span class="tag">DDD</span><span class="tag">Kafka</span><span class="tag">OpenAPI</span><span class="tag">AsyncAPI</span><span class="tag">BPMN</span><span class="tag">Camunda</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">ClickHouse</span><span class="tag">Keycloak</span><span class="tag">OAuth 2.0</span><span class="tag">JWT</span><span class="tag">mTLS</span><span class="tag">LLM</span><span class="tag">AI Agents</span>
+</div>
+</div></section>
+
+<section id="links"><div class="wrap">
+<h2 class="t">Let's connect</h2>
+<p class="intro">I am happy to discuss architecture, analysis practices or how I could contribute to your team.</p>
+<div class="contact">
+<a class="btn primary" style="background:var(--accent);border-color:var(--accent);color:#fff" href="https://www.linkedin.com/in/konstantin-kuzovkin/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="cv/Konstantin_Kuzovkin_CV.pdf">Download CV</a>
+<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener">Architecture Portfolio</a>
+</div>
+</div></section>
 </main>
 
-
-<footer>
-  <div class="container">
-    © 2026 Konstantin Kuzovkin ·
-    <a href="https://github.com/konstantin-kuzovkin/architecture-portfolio">
-      Architecture Portfolio
-    </a>
-  </div>
-</footer>
-
+<footer><div class="wrap">© 2026 Konstantin Kuzovkin · <a href="https://github.com/konstantin-kuzovkin/architecture-portfolio">Architecture Portfolio</a></div></footer>
 </body>
 </html>
