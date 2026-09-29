@@ -16,6 +16,7 @@ a{color:var(--accent)}
 header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--border)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
 .brand{font-weight:700;text-decoration:none;color:var(--text)}
+#lang{margin-left:16px;padding:6px 14px;border-radius:999px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-weight:700;cursor:pointer}#lang:hover{background:var(--accent);color:#fff}
 nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-size:.95rem}
 nav a:hover{color:var(--accent)}
 .hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;padding:72px 0 64px}
@@ -58,97 +59,98 @@ footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--border);color:v
 <body>
 <header><div class="wrap">
 <a class="brand" href="#top">Konstantin Kuzovkin</a>
-<nav><a href="#about">About</a><a href="#teamwork">Teamwork</a><a href="#expertise">Expertise</a><a href="#cases">Cases</a><a href="#proof">Proof of concept</a><a href="#experience">Experience</a><a href="#links">Contact</a></nav>
+<nav><a href="#about" data-ru="Обо мне">About</a><a href="#teamwork" data-ru="Команда">Teamwork</a><a href="#expertise" data-ru="Экспертиза">Expertise</a><a href="#cases" data-ru="Кейсы">Cases</a><a href="#proof" data-ru="Рабочий код">Proof of concept</a><a href="#experience" data-ru="Опыт">Experience</a><a href="#links" data-ru="Контакты">Contact</a></nav>
+<button id="lang" type="button" aria-label="Switch language">RU</button>
 </div></header>
 
 <main id="top">
 <div class="hero"><div class="wrap">
 <h1>Konstantin Kuzovkin</h1>
-<p class="role">Senior / Lead System Analyst · Solution &amp; Integration Architecture</p>
-<p>I help teams turn complex banking processes into clear, reliable and testable solutions — and I enjoy doing it together with developers, architects, testers and business owners.</p>
+<p class="role" data-ru="Старший / ведущий системный аналитик · Solution и Integration Architecture">Senior / Lead System Analyst · Solution &amp; Integration Architecture</p>
+<p data-ru="Помогаю командам превращать сложные банковские процессы в понятные, надёжные и тестируемые решения — и с удовольствием делаю это вместе с разработчиками, архитекторами, тестировщиками и владельцами бизнеса.">I help teams turn complex banking processes into clear, reliable and testable solutions — and I enjoy doing it together with developers, architects, testers and business owners.</p>
 <p>Banking · FinTech · Distributed Systems · Microservices · Kafka · Platform Architecture · AI-assisted Engineering</p>
 <div class="btns">
-<a class="btn primary" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener">Architecture Portfolio</a>
+<a class="btn primary" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener" data-ru="Портфолио архитектуры">Architecture Portfolio</a>
 <a class="btn" href="https://www.linkedin.com/in/konstantin-kuzovkin/" target="_blank" rel="noopener">LinkedIn</a>
-<a class="btn" href="cv/Konstantin_Kuzovkin_CV.pdf">Download CV</a>
+<a class="btn" href="cv/Konstantin_Kuzovkin_CV.pdf" data-ru="Скачать CV">Download CV</a>
 </div>
 </div></div>
 
 <div class="wrap"><div class="stats">
-<div class="stat"><b>5+</b><span>years in a large bank</span></div>
-<div class="stat"><b>40+</b><span>development teams supported</span></div>
-<div class="stat"><b>~10</b><span>business domains</span></div>
-<div class="stat"><b>90+</b><span>microservices</span></div>
-<div class="stat"><b>~12</b><span>years of insurance operations before IT</span></div>
+<div class="stat"><b>5+</b><span data-ru="лет в крупном банке">years in a large bank</span></div>
+<div class="stat"><b>40+</b><span data-ru="команд разработки">development teams supported</span></div>
+<div class="stat"><b>~10</b><span data-ru="бизнес-доменов">business domains</span></div>
+<div class="stat"><b>90+</b><span data-ru="микросервисов">microservices</span></div>
+<div class="stat"><b>~12</b><span data-ru="лет в страховании до IT">years of insurance operations before IT</span></div>
 </div></div>
 
 <section id="about"><div class="wrap about">
-<h2 class="t">About</h2>
-<p>I am a Senior / Lead System Analyst working on distributed, microservice-based systems in banking. My focus is solution and integration architecture: state ownership, idempotency, failure handling, reconciliation, API and event contracts.</p>
-<p>Before IT I spent about 12 years in insurance claims, so I read financial processes from the business side first. That helps me ask the right questions early and explain technical trade-offs in plain language.</p>
-<p>I work with REST/OpenAPI, SOAP/XML, Kafka/AsyncAPI, BPMN/Camunda, UML, ERD, data modelling and authentication/authorization. I am also building AI-assisted analysis tools based on LLMs, controlled tools and specialised agents, with source-grounded analysis and explicit hallucination controls.</p>
+<h2 class="t" data-ru="Обо мне">About</h2>
+<p data-ru="Я старший / ведущий системный аналитик, работаю с распределёнными микросервисными системами в банке. Мой фокус — архитектура решений и интеграций: владение состоянием, идемпотентность, обработка сбоев, сверка, контракты API и событий.">I am a Senior / Lead System Analyst working on distributed, microservice-based systems in banking. My focus is solution and integration architecture: state ownership, idempotency, failure handling, reconciliation, API and event contracts.</p>
+<p data-ru="До IT я около 12 лет работал в страховых выплатах, поэтому смотрю на финансовые процессы сначала глазами бизнеса. Это помогает вовремя задавать правильные вопросы и простым языком объяснять технические компромиссы.">Before IT I spent about 12 years in insurance claims, so I read financial processes from the business side first. That helps me ask the right questions early and explain technical trade-offs in plain language.</p>
+<p data-ru="Работаю с REST/OpenAPI, SOAP/XML, Kafka/AsyncAPI, BPMN/Camunda, UML, ERD, моделированием данных, аутентификацией и авторизацией. Также создаю инструменты AI-анализа на базе LLM, контролируемых инструментов и специализированных агентов — с опорой на источники и явным контролем галлюцинаций.">I work with REST/OpenAPI, SOAP/XML, Kafka/AsyncAPI, BPMN/Camunda, UML, ERD, data modelling and authentication/authorization. I am also building AI-assisted analysis tools based on LLMs, controlled tools and specialised agents, with source-grounded analysis and explicit hallucination controls.</p>
 </div></section>
 
 <section id="teamwork"><div class="wrap">
-<h2 class="t">How I work with teams</h2>
-<p class="intro">Good architecture is a shared result. I like clear agreements, open discussion of trade-offs and helping people around me grow.</p>
+<h2 class="t" data-ru="Как я работаю в команде">How I work with teams</h2>
+<p class="intro" data-ru="Хорошая архитектура — общий результат. Мне близки чёткие договорённости, открытое обсуждение компромиссов и помощь коллегам в росте.">Good architecture is a shared result. I like clear agreements, open discussion of trade-offs and helping people around me grow.</p>
 <div class="grid">
-<div class="card team"><h3>Cross-team alignment</h3><p>Aligning solutions across many teams, reviewing architecture together and resolving cross-team questions before they become blockers.</p></div>
-<div class="card team"><h3>Functional leadership</h3><p>Coordinating day-to-day analytical work and guiding colleagues without formal people management — through clarity, trust and example.</p></div>
-<div class="card team"><h3>Sharing knowledge</h3><p>Taking part in knowledge-sharing sessions and technical assessments of candidates, and documenting decisions so the next person can build on them.</p></div>
-<div class="card team"><h3>Standards that help</h3><p>Contributing to architecture standards and reusable patterns that make everyday work of neighbouring teams simpler, not heavier.</p></div>
+<div class="card team"><h3 data-ru="Согласование между командами">Cross-team alignment</h3><p data-ru="Согласую решения между многими командами, вместе с ними разбираю архитектуру и снимаю межкомандные вопросы до того, как они становятся блокерами.">Aligning solutions across many teams, reviewing architecture together and resolving cross-team questions before they become blockers.</p></div>
+<div class="card team"><h3 data-ru="Функциональное лидерство">Functional leadership</h3><p data-ru="Координирую повседневную аналитическую работу и направляю коллег без формального управления — через ясность, доверие и личный пример.">Coordinating day-to-day analytical work and guiding colleagues without formal people management — through clarity, trust and example.</p></div>
+<div class="card team"><h3 data-ru="Обмен знаниями">Sharing knowledge</h3><p data-ru="Участвую в сессиях обмена знаниями и технических собеседованиях кандидатов, документирую решения, чтобы следующий человек мог на них опереться.">Taking part in knowledge-sharing sessions and technical assessments of candidates, and documenting decisions so the next person can build on them.</p></div>
+<div class="card team"><h3 data-ru="Стандарты, которые помогают">Standards that help</h3><p data-ru="Участвую в архитектурных стандартах и переиспользуемых паттернах, которые упрощают, а не усложняют повседневную работу соседних команд.">Contributing to architecture standards and reusable patterns that make everyday work of neighbouring teams simpler, not heavier.</p></div>
 </div>
 </div></section>
 
 <section id="expertise"><div class="wrap">
-<h2 class="t">Architecture expertise</h2>
-<p class="intro">Practical focus areas demonstrated through architecture cases, technical artefacts and documented decisions.</p>
+<h2 class="t" data-ru="Архитектурная экспертиза">Architecture expertise</h2>
+<p class="intro" data-ru="Практические направления, подтверждённые архитектурными кейсами, техническими артефактами и задокументированными решениями.">Practical focus areas demonstrated through architecture cases, technical artefacts and documented decisions.</p>
 <div class="grid">
-<div class="card"><h3>Distributed Systems</h3><p>State ownership · Idempotency · Concurrency · Transactions · Reconciliation · Failure Recovery</p></div>
-<div class="card"><h3>Integration Architecture</h3><p>REST · OpenAPI · SOAP/XML · Kafka · AsyncAPI · Synchronous and Asynchronous Integration</p></div>
-<div class="card"><h3>Event-Driven Architecture</h3><p>At-least-once delivery · Ordering · Retry · DLQ · Event Contracts · Schema Evolution</p></div>
-<div class="card"><h3>Platform Architecture</h3><p>Architecture Governance · Standards · Architecture Reviews · Reusable Patterns · Cross-team Alignment</p></div>
-<div class="card"><h3>Workflow Architecture</h3><p>BPMN · Camunda · Orchestration · Long-running Processes · Compensation · Recovery</p></div>
-<div class="card"><h3>AI-assisted Engineering</h3><p>LLM · AI Agents · Tool Calling · RAG · Source-grounded Analysis · Provenance · Hallucination Control</p></div>
+<div class="card"><h3 data-ru="Распределённые системы">Distributed Systems</h3><p>State ownership · Idempotency · Concurrency · Transactions · Reconciliation · Failure Recovery</p></div>
+<div class="card"><h3 data-ru="Интеграционная архитектура">Integration Architecture</h3><p>REST · OpenAPI · SOAP/XML · Kafka · AsyncAPI · Synchronous and Asynchronous Integration</p></div>
+<div class="card"><h3 data-ru="Событийная архитектура">Event-Driven Architecture</h3><p>At-least-once delivery · Ordering · Retry · DLQ · Event Contracts · Schema Evolution</p></div>
+<div class="card"><h3 data-ru="Платформенная архитектура">Platform Architecture</h3><p>Architecture Governance · Standards · Architecture Reviews · Reusable Patterns · Cross-team Alignment</p></div>
+<div class="card"><h3 data-ru="Архитектура процессов">Workflow Architecture</h3><p>BPMN · Camunda · Orchestration · Long-running Processes · Compensation · Recovery</p></div>
+<div class="card"><h3 data-ru="AI-инженерия">AI-assisted Engineering</h3><p>LLM · AI Agents · Tool Calling · RAG · Source-grounded Analysis · Provenance · Hallucination Control</p></div>
 </div>
 </div></section>
 
 <section id="cases"><div class="wrap">
-<h2 class="t">Selected architecture cases</h2>
-<p class="intro">Six reconstructed and sanitised cases (no confidential data) covering distributed systems, integration, events, platform governance, workflows and AI-assisted analysis.</p>
+<h2 class="t" data-ru="Избранные архитектурные кейсы">Selected architecture cases</h2>
+<p class="intro" data-ru="Шесть реконструированных обезличенных кейсов (без конфиденциальных данных): распределённые системы, интеграции, события, платформенное управление, процессы и AI-анализ.">Six reconstructed and sanitised cases (no confidential data) covering distributed systems, integration, events, platform governance, workflows and AI-assisted analysis.</p>
 <div class="grid">
-<div class="card"><div class="n">CASE 01</div><h3>Payment &amp; Transfer Architecture</h3><p>Distributed transactions, state ownership, money flow, idempotency, concurrency control and reconciliation.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/01-payment-transfer-architecture" target="_blank" rel="noopener">View case →</a></div>
-<div class="card"><div class="n">CASE 02</div><h3>Event-Driven Architecture</h3><p>Kafka integration, delivery semantics, ordering, transactional outbox, idempotent consumers, retry/DLQ and AsyncAPI.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/02-event-driven-architecture" target="_blank" rel="noopener">View case →</a></div>
-<div class="card"><div class="n">CASE 03</div><h3>Integration Architecture</h3><p>REST/OpenAPI, legacy SOAP/XML and asynchronous Kafka integration patterns and contracts.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/03-integration-architecture" target="_blank" rel="noopener">View case →</a></div>
-<div class="card"><div class="n">CASE 04</div><h3>Platform Architecture</h3><p>Architecture governance, standards, reusable patterns, architecture reviews and multi-team alignment.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/04-platform-architecture" target="_blank" rel="noopener">View case →</a></div>
-<div class="card"><div class="n">CASE 05</div><h3>Workflow &amp; Process Orchestration</h3><p>Executable BPMN, long-running processes, timers, compensation, reconciliation and manual tasks.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/05-workflow-orchestration" target="_blank" rel="noopener">View case →</a></div>
-<div class="card"><div class="n">CASE 06</div><h3>AI-Assisted System Analysis</h3><p>LLM agents, controlled tools, source-grounded analysis, provenance and hallucination control.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/06-ai-assisted-system-analysis" target="_blank" rel="noopener">View case →</a></div>
+<div class="card"><div class="n">CASE 01</div><h3 data-ru="Архитектура платежей и переводов">Payment &amp; Transfer Architecture</h3><p data-ru="Распределённые транзакции, владение состоянием, движение денег, идемпотентность, контроль конкурентности и сверка.">Distributed transactions, state ownership, money flow, idempotency, concurrency control and reconciliation.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/01-payment-transfer-architecture" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
+<div class="card"><div class="n">CASE 02</div><h3 data-ru="Событийная архитектура">Event-Driven Architecture</h3><p data-ru="Интеграция через Kafka, семантика доставки, порядок, transactional outbox, идемпотентные потребители, retry/DLQ и AsyncAPI.">Kafka integration, delivery semantics, ordering, transactional outbox, idempotent consumers, retry/DLQ and AsyncAPI.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/02-event-driven-architecture" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
+<div class="card"><div class="n">CASE 03</div><h3 data-ru="Интеграционная архитектура">Integration Architecture</h3><p data-ru="REST/OpenAPI, устаревший SOAP/XML и асинхронные паттерны и контракты интеграции через Kafka.">REST/OpenAPI, legacy SOAP/XML and asynchronous Kafka integration patterns and contracts.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/03-integration-architecture" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
+<div class="card"><div class="n">CASE 04</div><h3 data-ru="Платформенная архитектура">Platform Architecture</h3><p data-ru="Архитектурное управление, стандарты, переиспользуемые паттерны, архитектурные ревью и согласование между командами.">Architecture governance, standards, reusable patterns, architecture reviews and multi-team alignment.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/04-platform-architecture" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
+<div class="card"><div class="n">CASE 05</div><h3 data-ru="Оркестрация процессов">Workflow &amp; Process Orchestration</h3><p data-ru="Исполняемый BPMN, длительные процессы, таймеры, компенсации, сверка и ручные задачи.">Executable BPMN, long-running processes, timers, compensation, reconciliation and manual tasks.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/05-workflow-orchestration" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
+<div class="card"><div class="n">CASE 06</div><h3 data-ru="AI-ассистированный системный анализ">AI-Assisted System Analysis</h3><p data-ru="LLM-агенты, контролируемые инструменты, анализ с опорой на источники, происхождение данных и контроль галлюцинаций.">LLM agents, controlled tools, source-grounded analysis, provenance and hallucination control.</p><a class="go" href="https://github.com/konstantin-kuzovkin/architecture-portfolio/tree/main/06-ai-assisted-system-analysis" target="_blank" rel="noopener" data-ru="Открыть кейс →">View case →</a></div>
 </div>
 </div></section>
 
 <section id="proof"><div class="wrap">
-<h2 class="t">Proof of concept: working code</h2>
-<p class="intro">Two small, runnable repositories with automated tests — patterns from the cases, implemented and checked.</p>
+<h2 class="t" data-ru="Рабочий код: proof of concept">Proof of concept: working code</h2>
+<p class="intro" data-ru="Два небольших запускаемых репозитория с автотестами — паттерны из кейсов, реализованные и проверенные.">Two small, runnable repositories with automated tests — patterns from the cases, implemented and checked.</p>
 <div class="grid">
-<div class="card"><div class="n">PYTHON · 11 TESTS</div><h3>outbox-idempotency-poc</h3><p>Transactional outbox, idempotent consumer and optimistic locking: retries never duplicate an operation and events are not lost.</p><a class="go" href="https://github.com/konstantin-kuzovkin/outbox-idempotency-poc" target="_blank" rel="noopener">Open repository →</a></div>
-<div class="card"><div class="n">PYTHON · 39 TESTS</div><h3>requirements-pipeline-poc</h3><p>Five-agent pipeline (discovery, requirements, artifacts, test design, validation): deterministic checks first, LLM only where judgment is needed.</p><a class="go" href="https://github.com/konstantin-kuzovkin/requirements-pipeline-poc" target="_blank" rel="noopener">Open repository →</a></div>
+<div class="card"><div class="n" data-ru="PYTHON · 11 ТЕСТОВ">PYTHON · 11 TESTS</div><h3>outbox-idempotency-poc</h3><p data-ru="Transactional outbox, идемпотентный потребитель и оптимистичная блокировка: повторы не дублируют операцию, а события не теряются.">Transactional outbox, idempotent consumer and optimistic locking: retries never duplicate an operation and events are not lost.</p><a class="go" href="https://github.com/konstantin-kuzovkin/outbox-idempotency-poc" target="_blank" rel="noopener" data-ru="Открыть репозиторий →">Open repository →</a></div>
+<div class="card"><div class="n" data-ru="PYTHON · 39 ТЕСТОВ">PYTHON · 39 TESTS</div><h3>requirements-pipeline-poc</h3><p data-ru="Пайплайн из пяти агентов (discovery, требования, артефакты, тест-дизайн, валидация): сначала детерминированные проверки, LLM — только там, где нужно суждение.">Five-agent pipeline (discovery, requirements, artifacts, test design, validation): deterministic checks first, LLM only where judgment is needed.</p><a class="go" href="https://github.com/konstantin-kuzovkin/requirements-pipeline-poc" target="_blank" rel="noopener" data-ru="Открыть репозиторий →">Open repository →</a></div>
 </div>
 </div></section>
 
 <section id="experience"><div class="wrap job">
-<h2 class="t">Professional experience</h2>
+<h2 class="t" data-ru="Профессиональный опыт">Professional experience</h2>
 <div class="card">
-<h3>Large Russian Bank — System Analyst / Senior System Analyst</h3>
-<div class="when">2021 — Present · Banking · Remote</div>
+<h3 data-ru="Крупный российский банк — системный аналитик / старший системный аналитик">Large Russian Bank — System Analyst / Senior System Analyst</h3>
+<div class="when" data-ru="2021 — настоящее время · Банкинг · Удалённо">2021 — Present · Banking · Remote</div>
 <ul>
-<li>Architecture and evolution of a large omnichannel banking platform on microservices and Domain-Driven Design, supporting 40+ teams, ~10 domains and 90+ microservices.</li>
-<li>Designed distributed transaction flows with explicit state ownership, idempotency, concurrency control, timeout handling and reconciliation.</li>
-<li>Designed integrations across REST/OpenAPI, SOAP/XML and Kafka/AsyncAPI, choosing patterns by latency, coupling, consistency and legacy constraints.</li>
-<li>Designed event-driven patterns: at-least-once delivery, idempotent consumers, partition ordering, retry/DLQ and event contract evolution.</li>
-<li>Designed BPMN/Camunda workflows with retries, timeouts, compensation, reconciliation and controlled manual intervention.</li>
-<li>Contributed to architecture standards, reusable patterns, architecture reviews and cross-team solution alignment.</li>
-<li>Functional leadership without formal people management; took part in candidate interviews and knowledge-sharing sessions.</li>
-<li>Designed and implemented an AI-assisted system analysis agent using LLMs, controlled tools and specialised agents.</li>
+<li data-ru="Архитектура и развитие крупной омниканальной банковской платформы на микросервисах и Domain-Driven Design: 40+ команд, ~10 доменов, 90+ микросервисов.">Architecture and evolution of a large omnichannel banking platform on microservices and Domain-Driven Design, supporting 40+ teams, ~10 domains and 90+ microservices.</li>
+<li data-ru="Проектировал потоки распределённых транзакций с явным владением состоянием, идемпотентностью, контролем конкурентности, обработкой таймаутов и сверкой.">Designed distributed transaction flows with explicit state ownership, idempotency, concurrency control, timeout handling and reconciliation.</li>
+<li data-ru="Проектировал интеграции REST/OpenAPI, SOAP/XML и Kafka/AsyncAPI, выбирая паттерны по задержке, связанности, согласованности и ограничениям legacy.">Designed integrations across REST/OpenAPI, SOAP/XML and Kafka/AsyncAPI, choosing patterns by latency, coupling, consistency and legacy constraints.</li>
+<li data-ru="Проектировал событийные паттерны: доставка at-least-once, идемпотентные потребители, порядок в партициях, retry/DLQ и эволюция контрактов событий.">Designed event-driven patterns: at-least-once delivery, idempotent consumers, partition ordering, retry/DLQ and event contract evolution.</li>
+<li data-ru="Проектировал BPMN/Camunda-процессы с повторами, таймаутами, компенсацией, сверкой и контролируемым ручным вмешательством.">Designed BPMN/Camunda workflows with retries, timeouts, compensation, reconciliation and controlled manual intervention.</li>
+<li data-ru="Участвовал в архитектурных стандартах, переиспользуемых паттернах, ревью и согласовании решений между командами.">Contributed to architecture standards, reusable patterns, architecture reviews and cross-team solution alignment.</li>
+<li data-ru="Функциональное лидерство без формального управления; участие в собеседованиях кандидатов и сессиях обмена знаниями.">Functional leadership without formal people management; took part in candidate interviews and knowledge-sharing sessions.</li>
+<li data-ru="Спроектировал и реализовал агента AI-анализа систем на основе LLM, контролируемых инструментов и специализированных агентов.">Designed and implemented an AI-assisted system analysis agent using LLMs, controlled tools and specialised agents.</li>
 </ul>
 </div>
 <div class="tags">
@@ -157,16 +159,25 @@ footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--border);color:v
 </div></section>
 
 <section id="links"><div class="wrap">
-<h2 class="t">Let's connect</h2>
-<p class="intro">I am happy to discuss architecture, analysis practices or how I could contribute to your team.</p>
+<h2 class="t" data-ru="Давайте свяжемся">Let's connect</h2>
+<p class="intro" data-ru="С радостью обсужу архитектуру, практики анализа или то, чем могу быть полезен вашей команде.">I am happy to discuss architecture, analysis practices or how I could contribute to your team.</p>
 <div class="contact">
 <a class="btn primary" style="background:var(--accent);border-color:var(--accent);color:#fff" href="https://www.linkedin.com/in/konstantin-kuzovkin/" target="_blank" rel="noopener">LinkedIn</a>
-<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="cv/Konstantin_Kuzovkin_CV.pdf">Download CV</a>
-<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener">Architecture Portfolio</a>
+<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="cv/Konstantin_Kuzovkin_CV.pdf" data-ru="Скачать CV">Download CV</a>
+<a class="btn" style="color:var(--accent);border-color:var(--accent)" href="https://github.com/konstantin-kuzovkin/architecture-portfolio" target="_blank" rel="noopener" data-ru="Портфолио архитектуры">Architecture Portfolio</a>
 </div>
 </div></section>
 </main>
 
-<footer><div class="wrap">© 2026 Konstantin Kuzovkin · <a href="https://github.com/konstantin-kuzovkin/architecture-portfolio">Architecture Portfolio</a></div></footer>
+<footer><div class="wrap">© 2026 Konstantin Kuzovkin · <a href="https://github.com/konstantin-kuzovkin/architecture-portfolio" data-ru="Портфолио архитектуры">Architecture Portfolio</a></div></footer>
+<script>
+(function(){var b=document.getElementById('lang'),els=document.querySelectorAll('[data-ru]'),ru=false;
+els.forEach(function(e){e.setAttribute('data-en',e.textContent)});
+function apply(){els.forEach(function(e){e.textContent=e.getAttribute(ru?'data-ru':'data-en')});
+document.documentElement.lang=ru?'ru':'en';b.textContent=ru?'EN':'RU';b.setAttribute('aria-label',ru?'Switch to English':'Переключить на русский')}
+try{ru=localStorage.getItem('lang')==='ru'}catch(x){}
+apply();
+b.addEventListener('click',function(){ru=!ru;try{localStorage.setItem('lang',ru?'ru':'en')}catch(x){}apply()})})();
+</script>
 </body>
 </html>
